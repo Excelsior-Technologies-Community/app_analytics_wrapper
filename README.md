@@ -50,20 +50,37 @@ app_analytics_wrapper/
 │
 ├─ lib/
 │   ├─ app_analytics_wrapper.dart
+│   │      # Public export file
 │   │
 │   └─ src/
 │       ├─ analytics_manager.dart
+│       │      # Main analytics controller (Singleton)
+│       │
 │       ├─ analytics_service.dart
+│       │      # Sends events to analytics provider
+│       │
 │       ├─ analytics_event.dart
+│       │      # Event data model
+│       │
 │       ├─ analytics_observer.dart
+│       │      # Auto screen tracking (NavigatorObserver)
+│       │
 │       └─ analytics_constants.dart
+│              # Predefined event/screen names
 │
 ├─ example/
 │   └─ main.dart
+│        # Example usage app
 │
 ├─ pubspec.yaml
+│      # Package configuration
+│
 ├─ README.md
+│      # Documentation
+│
 └─ LICENSE
+       # MIT license
+
 ```
 
 ------------
