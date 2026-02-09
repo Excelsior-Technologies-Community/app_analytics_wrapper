@@ -10,16 +10,16 @@ This helps you monitor how users interact with your application and allows you t
 
 ## ✨ Feature Preview
 
-🧭 Automatic screen tracking (NavigatorObserver)
-👆 Button click tracking
-🧩 Custom event tracking
-🚨 Error tracking
-🧠 Centralized analytics manager
-🔌 Provider independent architecture
-♻️ Clean and reusable
-🎯 No UI dependency
-⚡ Easy to integrate
-🏗 Production architecture ready
+- 🧭 Automatic screen tracking (NavigatorObserver)
+- 👆 Button click tracking
+- 🧩 Custom event tracking
+- 🚨 Error tracking
+- 🧠 Centralized analytics manager
+- 🔌 Provider independent architecture
+- ♻️ Clean and reusable
+- 🎯 No UI dependency
+- ⚡ Easy to integrate
+- 🏗 Production architecture ready
 
 
 --------------
