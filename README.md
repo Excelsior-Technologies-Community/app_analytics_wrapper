@@ -35,6 +35,12 @@ then run:
 ```
 flutter pub get
 ```
+--------------
+
+## Preview
+
+<img width="1914" height="964" alt="Screenshot 2026-02-09 161110" src="https://github.com/user-attachments/assets/053d0737-5149-4764-aa55-29549a9250f2" />
+<img width="1916" height="960" alt="Screenshot 2026-02-09 161245" src="https://github.com/user-attachments/assets/d105eded-44f1-46f0-b1d6-2a8c341f660b" />
 
 --------------
 
