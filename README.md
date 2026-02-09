@@ -1,4 +1,4 @@
-## app_analytics_wrapper
+## 📊 app_analytics_wrapper
 
 app_analytics_wrapper is a lightweight Flutter analytics abstraction library that tracks user behavior inside your app such as screen views, button clicks, custom events, and errors.
 
@@ -8,22 +8,30 @@ This helps you monitor how users interact with your application and allows you t
 
 ------------
 
-## Feature Preview
+## ✨ Feature Preview
 
-- Automatic screen tracking (NavigatorObserver)
-- Button click tracking
-- Custom event tracking
-- Error tracking
-- Centralized analytics manager
-- Provider independent architecture
-- Clean and reusable
-- No UI dependency
-- Easy to integrate
-- Production architecture ready
+🧭 Automatic screen tracking (NavigatorObserver)
+👆 Button click tracking
+🧩 Custom event tracking
+🚨 Error tracking
+🧠 Centralized analytics manager
+🔌 Provider independent architecture
+♻️ Clean and reusable
+🎯 No UI dependency
+⚡ Easy to integrate
+🏗 Production architecture ready
 
--------------
 
-## Installation
+--------------
+
+## 🖼 Preview
+
+<img width="1914" height="964" alt="Screenshot 2026-02-09 161110" src="https://github.com/user-attachments/assets/053d0737-5149-4764-aa55-29549a9250f2" />
+<img width="1916" height="960" alt="Screenshot 2026-02-09 161245" src="https://github.com/user-attachments/assets/d105eded-44f1-46f0-b1d6-2a8c341f660b" />
+
+--------------
+
+## 📦 Installation
 
 Add this to your pubspec.yaml:
 ```
@@ -35,16 +43,9 @@ then run:
 ```
 flutter pub get
 ```
---------------
+-------------
 
-## Preview
-
-<img width="1914" height="964" alt="Screenshot 2026-02-09 161110" src="https://github.com/user-attachments/assets/053d0737-5149-4764-aa55-29549a9250f2" />
-<img width="1916" height="960" alt="Screenshot 2026-02-09 161245" src="https://github.com/user-attachments/assets/d105eded-44f1-46f0-b1d6-2a8c341f660b" />
-
---------------
-
-## File Structure
+## 🗂 File Structure
 ```
 app_analytics_wrapper/
 │
@@ -85,15 +86,45 @@ app_analytics_wrapper/
 
 ------------
 
-## Usage
+## 🧩 AnalyticsManager API
+```
+| Method          | Parameters                                    | Required | Description                                       |
+| --------------- | --------------------------------------------- | -------- | ------------------------------------------------- |
+| `trackEvent()`  | `name: String, params: Map<String, dynamic>?` | Yes      | Sends a custom analytics event with optional data |
+| `trackClick()`  | `buttonName: String`                          | Yes      | Tracks button or UI interaction                   |
+| `trackScreen()` | `screenName: String`                          | Yes      | Tracks a screen/page view manually                |
+| `trackError()`  | `message: String`                             | Yes      | Logs application errors                           |
+```
+------------
+
+## 🧭 AnalyticsObserver
+```
+| Property             | Type                | Required | Description                                                   |
+| -------------------- | ------------------- | -------- | ------------------------------------------------------------- |
+| `navigatorObservers` | `NavigatorObserver` | Yes      | Enables automatic screen tracking when added to `MaterialApp` |
+```
+
+------------
+
+## 📄 AnalyticsEvent
+```
+| Property     | Type                    | Required | Description             |
+| ------------ | ----------------------- | -------- | ----------------------- |
+| `name`       | `String`                | Yes      | Event name              |
+| `parameters` | `Map<String, dynamic>?` | No       | Extra event information |
+```
+
+------------
+
+## 🚀 Usage
 
 ---
-1. Import
+1️⃣ Import
 ```
 import 'package:app_analytics_wrapper/app_analytics_wrapper.dart';
 ```
 ---
-2. Enable Automatic Screen Tracking
+2️⃣ Enable Automatic Screen Tracking
 
 Add AnalyticsObserver inside MaterialApp:
 ```
@@ -104,14 +135,14 @@ MaterialApp(
 );
 ```
 ------
-3. Track Button Click
+3️⃣ Track Button Click
 ```
 final analytics = AnalyticsManager();
 
 analytics.trackClick("login_button");
 ```
 ----------
-4. Track Custom Event
+4️⃣ Track Custom Event
 ```
 analytics.trackEvent(
   "purchase",
@@ -121,18 +152,18 @@ analytics.trackEvent(
   },
 );
 ```
-5. Track Screen Manually (Optional)
+5️⃣ Track Screen Manually (Optional)
 ```
 analytics.trackScreen("home_screen");
 ```
-6. Track Error
+6️⃣ Track Error
 ```
 analytics.trackError("API request failed");
 ```
 
 -------------------
 
-## MIT License
+## 📜 MIT License
 ```
 Copyright (c) 2026
 
