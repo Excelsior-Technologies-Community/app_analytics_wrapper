@@ -87,32 +87,32 @@ app_analytics_wrapper/
 ------------
 
 ## 🧩 AnalyticsManager API
-```
+
 | Method          | Parameters                                    | Required | Description                                       |
 | --------------- | --------------------------------------------- | -------- | ------------------------------------------------- |
 | `trackEvent()`  | `name: String, params: Map<String, dynamic>?` | Yes      | Sends a custom analytics event with optional data |
 | `trackClick()`  | `buttonName: String`                          | Yes      | Tracks button or UI interaction                   |
 | `trackScreen()` | `screenName: String`                          | Yes      | Tracks a screen/page view manually                |
 | `trackError()`  | `message: String`                             | Yes      | Logs application errors                           |
-```
+
 ------------
 
 ## 🧭 AnalyticsObserver
-```
+
 | Property             | Type                | Required | Description                                                   |
 | -------------------- | ------------------- | -------- | ------------------------------------------------------------- |
 | `navigatorObservers` | `NavigatorObserver` | Yes      | Enables automatic screen tracking when added to `MaterialApp` |
-```
+
 
 ------------
 
 ## 📄 AnalyticsEvent
-```
+
 | Property     | Type                    | Required | Description             |
 | ------------ | ----------------------- | -------- | ----------------------- |
 | `name`       | `String`                | Yes      | Event name              |
 | `parameters` | `Map<String, dynamic>?` | No       | Extra event information |
-```
+
 
 ------------
 
