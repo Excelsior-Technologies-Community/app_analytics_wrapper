@@ -1,16 +1,132 @@
-# app_analytics_wrapper
+## app_analytics_wrapper
 
-A new Flutter project.
+app_analytics_wrapper is a lightweight Flutter analytics abstraction library that tracks user behavior inside your app such as screen views, button clicks, custom events, and errors.
 
-## Getting Started
+It provides a centralized analytics layer so your app never depends directly on Firebase, Mixpanel, or any analytics provider.
 
-This project is a starting point for a Flutter application.
+This helps you monitor how users interact with your application and allows you to change analytics providers in the future without modifying your app code.
 
-A few resources to get you started if this is your first Flutter project:
+------------
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Feature Preview
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Automatic screen tracking (NavigatorObserver)
+- Button click tracking
+- Custom event tracking
+- Error tracking
+- Centralized analytics manager
+- Provider independent architecture
+- Clean and reusable
+- No UI dependency
+- Easy to integrate
+- Production architecture ready
+
+-------------
+
+## Installation
+
+Add this to your pubspec.yaml:
+```
+dependencies:
+  app_analytics_wrapper:
+    path: ../app_analytics_wrapper
+```
+then run:
+```
+flutter pub get
+```
+
+--------------
+
+## File Structure
+```
+app_analytics_wrapper/
+│
+├─ lib/
+│   ├─ app_analytics_wrapper.dart
+│   │
+│   └─ src/
+│       ├─ analytics_manager.dart
+│       ├─ analytics_service.dart
+│       ├─ analytics_event.dart
+│       ├─ analytics_observer.dart
+│       └─ analytics_constants.dart
+│
+├─ example/
+│   └─ main.dart
+│
+├─ pubspec.yaml
+├─ README.md
+└─ LICENSE
+```
+
+------------
+
+## Usage
+
+---
+1. Import
+```
+import 'package:app_analytics_wrapper/app_analytics_wrapper.dart';
+```
+---
+2. Enable Automatic Screen Tracking
+
+Add AnalyticsObserver inside MaterialApp:
+```
+MaterialApp(
+  navigatorObservers: [
+    AnalyticsObserver(),
+  ],
+);
+```
+------
+3. Track Button Click
+```
+final analytics = AnalyticsManager();
+
+analytics.trackClick("login_button");
+```
+----------
+4. Track Custom Event
+```
+analytics.trackEvent(
+  "purchase",
+  params: {
+    "product_id": "123",
+    "price": 499
+  },
+);
+```
+5. Track Screen Manually (Optional)
+```
+analytics.trackScreen("home_screen");
+```
+6. Track Error
+```
+analytics.trackError("API request failed");
+```
+
+-------------------
+
+## MIT License
+```
+Copyright (c) 2026
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this app_analytics_wrapper library and associated documentation files
+(the “Software”), to deal in the Software without restriction, including without
+limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY...
+```
+
